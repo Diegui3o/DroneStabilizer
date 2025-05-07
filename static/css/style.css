@@ -1,0 +1,66 @@
+/* Additional styling beyond Bootstrap */
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .chart-container {
+        height: 250px;
+    }
+}
+
+.card {
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+}
+
+.card-header svg {
+    margin-right: 8px;
+}
+
+/* Better form controls */
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Tab styling */
+.nav-tabs .nav-link {
+    color: var(--bs-light);
+}
+
+.nav-tabs .nav-link.active {
+    font-weight: bold;
+}
+
+/* Styling for metrics table */
+#metrics-container table {
+    margin-bottom: 0;
+}
+
+#metrics-container th {
+    width: 50%;
+}
+
+/* Animation for loading */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+#simulationInfo:contains('Running') {
+    animation: pulse 1.5s infinite;
+}
